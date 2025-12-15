@@ -133,7 +133,7 @@ The system focuses on:
 **Rajsv Mahendra**  
 Student | Data Science & Machine Learning Enthusiast  
 
-🔗 LinkedIn: https://www.linkedin.com/in/rajsv-mahendra  
+🔗 LinkedIn: https://www.linkedin.com/in/rajsvmahendra/
 📦 GitHub: https://github.com/rajsvmahendra  
 
 ---

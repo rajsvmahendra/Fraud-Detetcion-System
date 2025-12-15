@@ -1,0 +1,104 @@
+/* GLOBAL RESET */
+body {
+  margin: 0;
+}
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Make Streamlit background transparent so video shows */
+.stApp {
+  background: transparent !important;
+}
+
+/* FULLSCREEN VIDEO */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -100;
+  filter: brightness(60%);
+}
+
+/* LANDING LAYOUT */
+.landing-container {
+  text-align: center;
+  margin-top: 18vh;
+  margin-bottom: 3rem;
+}
+
+.title-center {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #D4AF37;
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+}
+
+.subtitle-center {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+}
+
+/* NAV CARD BUTTONS */
+.stButton > button {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  border: 1px solid #D4AF37;
+  color: #f8f8f8;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Holographic scan line */
+.stButton > button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 255, 136, 0.85),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+/* Hover behavior: scan + glow */
+.stButton > button:hover::before {
+  animation: scan-sweep 0.7s linear;
+}
+
+@keyframes scan-sweep {
+  0% {
+    left: -130%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.stButton > button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 22px rgba(0, 255, 136, 0.75);
+  border-color: #00ff88;
+}
+
+/* For the inner pages we still want a dark base behind content */
+.block-container {
+  padding-top: 2rem;
+}
